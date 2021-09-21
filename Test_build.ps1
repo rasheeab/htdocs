@@ -8,3 +8,6 @@ $uri = "http://localhost/php_scripts/upload.php"
 $contentType = "multipart/form-data"
 $body = @{
     "fileToUpload" = Get-Content($fileToUpload) -Raw
+}
+
+Invoke-RestMethod -Uri $uri -Method Post -InFile $fileToUpload 
