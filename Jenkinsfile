@@ -6,7 +6,7 @@ pipeline {
         steps {
            echo "Checkout Started #########################################"
           echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
-		  checkout([$class: 'GitSCM', branches: [[name: '*/web']], extensions: [], userRemoteConfigs: [[credentialsId: 'rash-git', url: 'https://github.com/rasheeab/htdocs.git']]])
+		  checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'rash-git', url: 'https://github.com/rasheeab/htdocs.git']]])
 		  echo "Checkout completed #########################################"
         }
    }
@@ -16,7 +16,7 @@ pipeline {
         steps {
           echo "Build Started #########################################"
           echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
-		  git branch: 'web', credentialsId: 'rash-git', url: 'https://github.com/rasheeab/htdocs.git'
+		  git branch: 'main', credentialsId: 'rash-git', url: 'https://github.com/rasheeab/htdocs.git'
 		  echo "Build Started #########################################"
         }
    }
