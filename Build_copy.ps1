@@ -1,0 +1,2 @@
+###Script to copy the build to Dev env for testing
+Copy-Item -Path "C:\\Users\\rashe\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\build\\V_1.${BUILD_NUMBER}\\*" -Destination "C:\\Dev\\Web\\Apache24\\htdocs" -Recurse
