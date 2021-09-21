@@ -17,7 +17,7 @@ pipeline {
           echo "Build Started #########################################"
           echo "Running ${env.BUILD_ID} ${env.BUILD_DISPLAY_NAME} on ${env.NODE_NAME} and JOB ${env.JOB_NAME}"
 		  git branch: 'main', credentialsId: 'rash-git', url: 'https://github.com/rasheeab/htdocs.git'
-		  echo "Build Started #########################################"
+		  echo "Build completed #########################################"
         }
    }
    stage('Test') {
