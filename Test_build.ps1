@@ -2,12 +2,12 @@
 #-- ------ ------          ------                                    
 #   post   fileuploads.php {[fileToUpload, ], [submit, Upload Image]}
 
-$fileToUpload = "C:\Web\Apache24\htdocs\bofa_statement.csv"
+$filepath = "C:\Web\Apache24\htdocs\bofa_statement.csv"
 
 $uri = "http://localhost/php_scripts/upload.php"
 $contentType = "multipart/form-data"
 $body = @{
-    "fileToUpload" = Get-Content($fileToUpload) -Raw
+    "filepath" = Get-Content($filepath) -Raw
 }
 
-Invoke-RestMethod -Uri $uri -Method Post -InFile $fileToUpload 
+Invoke-RestMethod -Uri $uri -Method Post -InFile $filepath 
