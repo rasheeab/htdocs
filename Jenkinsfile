@@ -26,9 +26,9 @@ pipeline {
 		echo "Installing in integration env #########################################"
 		
 		echo "#############Testing##${BUILD_NUMBER}"
-        PowerShell(". '.\\Build_copy.ps1 ${BUILD_NUMBER}'") 
- 		echo 'Testing Started #########################################'
-		PowerShell(". '.\\Test_build.ps1'") 
+		powershell returnStatus: true, script: '.\\Build_copy.ps1 ${BUILD_NUMBER}'
+   		echo 'Testing Started #########################################'
+		powershell returnStatus: true, script: '.\\Test_build.ps1'
 		echo 'Testing Completed #########################################'
 		
      }
