@@ -3,7 +3,7 @@
 #   post   fileuploads.php {[fileToUpload, ], [submit, Upload Image]}
 
 $FilePath = 'C:\Web\Apache24\htdocs\bofa_statement.csv';
-$URL = 'http://localhost/php_scripts/upload.php';
+$URL = 'http://localhost:6060/php_scripts/upload.php';
 
 $fileBytes = [System.IO.File]::ReadAllBytes($FilePath);
 $fileEnc = [System.Text.Encoding]::GetEncoding('UTF-8').GetString($fileBytes);
