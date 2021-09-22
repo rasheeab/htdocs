@@ -24,6 +24,10 @@ pipeline {
      steps {
    	
 		echo "Installing in integration env #########################################"
+		
+		echo "#############Testing##${BUILD_NUMBER}"
+		echo "#############Build_copy.ps1 ${BUILD_NUMBER}"
+		powershell 'invoke-command {$pwd}'
 		powershell 'Build_copy.ps1 ${BUILD_NUMBER}'
 		
 		echo 'Testing Started #########################################'
