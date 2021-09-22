@@ -27,6 +27,7 @@ pipeline {
 		
 		echo "#############Testing##${BUILD_NUMBER}"
 		powershell returnStatus: true, script: '.\\Build_copy.ps1 $BUILD_NUMBER'
+		echo "#############Testing post ps1## $BUILD_NUMBER"
    		echo 'Testing Started #########################################'
 		powershell returnStatus: true, script: '.\\Test_build.ps1'
 		echo 'Testing Completed #########################################'
