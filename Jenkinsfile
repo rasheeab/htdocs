@@ -28,10 +28,10 @@ pipeline {
 		echo "#############Testing##${BUILD_NUMBER}"
 		echo "#############Build_copy.ps1 ${BUILD_NUMBER}"
 		powershell 'invoke-command {$pwd}'
-		powershell 'Build_copy.ps1 ${BUILD_NUMBER}'
+		powershell 'C:\Users\rashe\AppData\Local\Jenkins\.jenkins\workspace\Bank_statement_upload\Build_copy.ps1 ${BUILD_NUMBER}'
 		
 		echo 'Testing Started #########################################'
-		powershell 'Test_build.ps1'
+		powershell 'C:\Users\rashe\AppData\Local\Jenkins\.jenkins\workspace\Bank_statement_upload\Test_build.ps1'
 		echo 'Testing Completed #########################################'
 		
      }
