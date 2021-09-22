@@ -8,7 +8,7 @@ Copy-Item -Path "C:\\Users\\rashe\\AppData\\Local\\Jenkins\\.jenkins\\workspace\
 
 
 Write-Output "installing#########$build_number### to integration"
-Copy-Item -Path "C:\\Users\\rashe\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\build\\Bank_statement_upload\\BS_V_1.$($build_number)\\*" -Destination "C:\\Dev\\Web\\Apache24\\htdocs" -Recurse
+Copy-Item -Path "C:\\Users\\rashe\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\build\\Bank_statement_upload\\BS_V_1.$($build_number)\\*" -Destination "C:\\Dev\\Web\\Apache24\\htdocs" -Recurse -Force
 
 
 
