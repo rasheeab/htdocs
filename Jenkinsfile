@@ -27,10 +27,10 @@ pipeline {
 		
 		echo "#############Testing##${BUILD_NUMBER}"
 		echo "#############Build_copy.ps1 ${BUILD_NUMBER}"
-		powershell '. .\Build_copy.ps1 ${BUILD_NUMBER}'
+		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe . ./Build_copy.ps1 ${BUILD_NUMBER}'
 		
 		echo 'Testing Started #########################################'
-		powershell 'C:\Users\rashe\AppData\Local\Jenkins\.jenkins\workspace\Bank_statement_upload\Test_build.ps1'
+		C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe . ./'Test_build.ps1'
 		echo 'Testing Completed #########################################'
 		
      }
