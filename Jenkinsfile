@@ -27,8 +27,7 @@ pipeline {
 		
 		echo "#############Testing##${BUILD_NUMBER}"
 		echo "#############Build_copy.ps1 ${BUILD_NUMBER}"
-		powershell 'invoke-command {$pwd}'
-		powershell 'C:\Users\rashe\AppData\Local\Jenkins\.jenkins\workspace\Bank_statement_upload\Build_copy.ps1 ${BUILD_NUMBER}'
+		powershell '. .\Build_copy.ps1 ${BUILD_NUMBER}'
 		
 		echo 'Testing Started #########################################'
 		powershell 'C:\Users\rashe\AppData\Local\Jenkins\.jenkins\workspace\Bank_statement_upload\Test_build.ps1'
